@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Http\Requests;
 use App\Http\Requests\CreateArticleRequest;
+use App\Http\Controllers\Controller; 
+use Illuminate\Http\Request;
 use Carbon\Carbon;
 
 class ArticlesController extends Controller {
