@@ -11,6 +11,12 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller {
+
+    public function _construct() {
+        
+        $this->middleware('auth', ['only' => 'create']);    
+    }
+
     public function index() {
         
         $articles = Article::latest('published_at')->published()->get();
